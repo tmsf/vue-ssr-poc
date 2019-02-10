@@ -1,12 +1,12 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const vueExample = require('./src/app')
+const vueButton = require('./src/button')
 
 const { createRenderer } = require('vue-server-renderer')
 
 app.get('/', (req, res) => {
-  const example = vueExample({ url: 'foo' })
+  const example = vueButton({ url: 'foo' })
   const renderer = createRenderer({})
 
   renderer.renderToString(example, (err, html) => {

@@ -2,7 +2,7 @@ const Vue = require('vue')
 
 module.exports = function (context) {
   const type = 'primary'
-  const modifier = 'some modifier'
+  const modifier = 'some-modifier'
   const metadata = { some: 'data', in_json: 'format' }
   return new Vue({
     data: {

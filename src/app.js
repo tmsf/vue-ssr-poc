@@ -5,6 +5,10 @@ module.exports = function createApp (context) {
     data: {
       url: context.url
     },
-    template: `<div>The visited URL is: {{ url }}</div>`
+    template: `
+    <div>
+      <div>The visited URL is: {{ url }}</div>
+    </div>
+    `
   })
 }

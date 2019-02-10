@@ -1,31 +1,15 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const vue = require('./src/app')
-
-const webpack = require('webpack')
-const webpackMiddleware = require('webpack-dev-middleware')
-const webpackConfig = require('./src/config/webpack.config.js')
-
-app.use(webpackMiddleware(webpack(webpackConfig)))
-
-// renderer
-// const serverBundle = require('./src/vue-ssr-server-bundle.json')
+const vueExample = require('./src/app')
 
 const { createRenderer } = require('vue-server-renderer')
-const renderer = createRenderer({ /* options */ })
 
-// const renderer = createBundleRenderer(serverBundle, {
-//   runInNewContext: false // recommended
-//   // template, // (optional) page template
-//   // clientManifest // (optional) client build manifest
-// })
-
-//
 app.get('/', (req, res) => {
-  const app = vue({ url: 'foo' })
+  const example = vueExample({ url: 'foo' })
+  const renderer = createRenderer({})
 
-  renderer.renderToString(app, (err, html) => {
+  renderer.renderToString(example, (err, html) => {
     if (err) console.log('err', err)
     res.end(html)
   })

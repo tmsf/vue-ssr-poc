@@ -1,0 +1,26 @@
+{
+  "extends": "standard",
+  "plugins": [
+    "import",
+    "standard"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "amd": true,
+    "browser": true,
+    "es6": true,
+    "jasmine": true,
+    "jquery": true,
+    "node": true,
+    "serviceworker": true
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  },
+  "rules": {
+    "no-new": 0
+  }
+}

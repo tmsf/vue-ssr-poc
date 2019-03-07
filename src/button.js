@@ -5,8 +5,7 @@ module.exports = function (context) {
   const modifier = 'some-modifier'
   const metadata = { some: 'data', in_json: 'format' }
 
-
-  cosnt component = new Vue({
+  const component = new Vue({
     data: {
       url: context.url,
 
